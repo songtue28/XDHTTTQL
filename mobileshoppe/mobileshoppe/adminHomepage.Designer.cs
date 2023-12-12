@@ -72,15 +72,15 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dgSaleReportDay = new System.Windows.Forms.DataGridView();
+            this.dtpDay = new System.Windows.Forms.DateTimePicker();
             this.lblSearchDay = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgSaleReportDate = new System.Windows.Forms.DataGridView();
             this.lblSearchDate = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateMax = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateMin = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -110,9 +110,9 @@
             this.tabPage3.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSaleReportDay)).BeginInit();
             this.tabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSaleReportDate)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -547,8 +547,8 @@
             // 
             // tabPage8
             // 
-            this.tabPage8.Controls.Add(this.dataGridView1);
-            this.tabPage8.Controls.Add(this.dateTimePicker1);
+            this.tabPage8.Controls.Add(this.dgSaleReportDay);
+            this.tabPage8.Controls.Add(this.dtpDay);
             this.tabPage8.Controls.Add(this.lblSearchDay);
             this.tabPage8.Controls.Add(this.label16);
             this.tabPage8.Location = new System.Drawing.Point(4, 28);
@@ -559,21 +559,23 @@
             this.tabPage8.Text = "Day";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgSaleReportDay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 182);
-            this.dataGridView1.TabIndex = 3;
+            this.dgSaleReportDay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSaleReportDay.Location = new System.Drawing.Point(32, 132);
+            this.dgSaleReportDay.Name = "dgSaleReportDay";
+            this.dgSaleReportDay.Size = new System.Drawing.Size(478, 182);
+            this.dgSaleReportDay.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtpDay
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 56);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 24);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpDay.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDay.Location = new System.Drawing.Point(137, 56);
+            this.dtpDay.Name = "dtpDay";
+            this.dtpDay.Size = new System.Drawing.Size(265, 24);
+            this.dtpDay.TabIndex = 2;
+            this.dtpDay.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
+            this.dtpDay.ValueChanged += new System.EventHandler(this.dtpDay_ValueChanged);
             // 
             // lblSearchDay
             // 
@@ -596,10 +598,10 @@
             // 
             // tabPage9
             // 
-            this.tabPage9.Controls.Add(this.dataGridView2);
+            this.tabPage9.Controls.Add(this.dgSaleReportDate);
             this.tabPage9.Controls.Add(this.lblSearchDate);
-            this.tabPage9.Controls.Add(this.dateTimePicker3);
-            this.tabPage9.Controls.Add(this.dateTimePicker2);
+            this.tabPage9.Controls.Add(this.dtpDateMax);
+            this.tabPage9.Controls.Add(this.dtpDateMin);
             this.tabPage9.Controls.Add(this.label19);
             this.tabPage9.Controls.Add(this.label18);
             this.tabPage9.Location = new System.Drawing.Point(4, 28);
@@ -610,13 +612,13 @@
             this.tabPage9.Text = "Date to Date";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgSaleReportDate
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(39, 137);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(469, 182);
-            this.dataGridView2.TabIndex = 5;
+            this.dgSaleReportDate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSaleReportDate.Location = new System.Drawing.Point(39, 137);
+            this.dgSaleReportDate.Name = "dgSaleReportDate";
+            this.dgSaleReportDate.Size = new System.Drawing.Size(469, 182);
+            this.dgSaleReportDate.TabIndex = 5;
             // 
             // lblSearchDate
             // 
@@ -626,24 +628,27 @@
             this.lblSearchDate.Size = new System.Drawing.Size(51, 19);
             this.lblSearchDate.TabIndex = 4;
             this.lblSearchDate.Text = "Search";
+            this.lblSearchDate.Click += new System.EventHandler(this.lblSearchDate_Click);
             // 
-            // dateTimePicker3
+            // dtpDateMax
             // 
-            this.dateTimePicker3.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(147, 79);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(243, 24);
-            this.dateTimePicker3.TabIndex = 3;
+            this.dtpDateMax.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateMax.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateMax.Location = new System.Drawing.Point(147, 79);
+            this.dtpDateMax.Name = "dtpDateMax";
+            this.dtpDateMax.Size = new System.Drawing.Size(243, 24);
+            this.dtpDateMax.TabIndex = 3;
+            this.dtpDateMax.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
-            // dateTimePicker2
+            // dtpDateMin
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(147, 35);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(243, 22);
-            this.dateTimePicker2.TabIndex = 2;
+            this.dtpDateMin.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateMin.Location = new System.Drawing.Point(147, 35);
+            this.dtpDateMin.Name = "dtpDateMin";
+            this.dtpDateMin.Size = new System.Drawing.Size(243, 22);
+            this.dtpDateMin.TabIndex = 2;
+            this.dtpDateMin.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // label19
             // 
@@ -847,10 +852,10 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSaleReportDay)).EndInit();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSaleReportDate)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
@@ -903,15 +908,15 @@
         private System.Windows.Forms.DateTimePicker dtpWarr;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgSaleReportDay;
+        private System.Windows.Forms.DateTimePicker dtpDay;
         private System.Windows.Forms.Label lblSearchDay;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgSaleReportDate;
         private System.Windows.Forms.Label lblSearchDate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpDateMax;
+        private System.Windows.Forms.DateTimePicker dtpDateMin;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtEmpName;

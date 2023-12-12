@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -160,6 +161,23 @@ namespace mobileshoppe
                         {
                             cmdmobile.Parameters.AddWithValue("@IMEINO", IMEI);
                             cmdmobile.ExecuteNonQuery();
+                            using (SqlCommand cmdGetModId = new SqlCommand("SELECT ModID FROM model WHERE ModNum = @modNum", conn))
+                            {
+                                cmdGetModId.Parameters.AddWithValue("@modNum", lblmodnum.Text);
+                                int modID = Convert.ToInt32(cmdGetModId.ExecuteScalar());
+
+                                using (SqlCommand cmdGetQty = new SqlCommand("SELECT AvailableQty FROM model WHERE ModNum = @modNum", conn))
+                                {
+                                    cmdGetQty.Parameters.AddWithValue("@modNum", lblmodnum.Text);
+                                    int Aquantity = Convert.ToInt32(cmdGetQty.ExecuteScalar());
+                                    using (SqlCommand cmdmodel = new SqlCommand("update model set AvailableQty =  @Aquantity -1 where ModID = @modID ", conn))
+                                    {
+                                        cmdmodel.Parameters.AddWithValue("@Aquantity", Aquantity);
+                                        cmdmodel.Parameters.AddWithValue("@modID", modID);
+                                        cmdmodel.ExecuteNonQuery();
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -169,5 +187,7 @@ namespace mobileshoppe
             }
             
         }
+
+        
     }
 }

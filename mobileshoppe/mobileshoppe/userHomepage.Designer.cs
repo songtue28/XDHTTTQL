@@ -354,9 +354,9 @@
             // dgSearchIMIE
             // 
             this.dgSearchIMIE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSearchIMIE.Location = new System.Drawing.Point(45, 187);
+            this.dgSearchIMIE.Location = new System.Drawing.Point(12, 187);
             this.dgSearchIMIE.Name = "dgSearchIMIE";
-            this.dgSearchIMIE.Size = new System.Drawing.Size(497, 169);
+            this.dgSearchIMIE.Size = new System.Drawing.Size(386, 169);
             this.dgSearchIMIE.TabIndex = 3;
             // 
             // lblSearch

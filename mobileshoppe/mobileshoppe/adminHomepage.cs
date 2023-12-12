@@ -383,7 +383,44 @@ namespace mobileshoppe
 
         private void lblSearchDay_Click(object sender, EventArgs e)
         {
+            DateTime date = Convert.ToDateTime(dtpDay.Value);
 
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["cs"].ToString()))
+            {
+                cmd = new SqlCommand("select s1.salesID, c1.compName, md1.ModNum, s1.IMEINO, s1.price from sales s1 inner join mobile mb1 on s1.IMEINO = mb1.IMEINO   inner join model md1 on mb1.modID = md1.ModID   inner join company c1 on  md1.compID = c1.compID where s1.salesDate = @date", conn);
+                cmd.Parameters.AddWithValue("@date", date);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                // Đổ dữ liệu vào DataGridView
+                dgSaleReportDay.DataSource = dt;
+            }
+        }
+
+        private void dtpDay_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblSearchDate_Click(object sender, EventArgs e)
+        {
+            DateTime dateMin = Convert.ToDateTime(dtpDateMin.Value);
+
+            DateTime dateMax = Convert.ToDateTime(dtpDateMax.Value);
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["cs"].ToString()))
+            {
+                cmd = new SqlCommand("select s1.salesID, c1.compName, md1.ModNum, s1.IMEINO, s1.price\r\nfrom sales s1 inner join mobile mb1 on s1.IMEINO = mb1.IMEINO\r\n\t  inner join model md1 on mb1.modID = md1.ModID\r\n\t  inner join company c1 on  md1.compID = c1.compID\r\nWHERE s1.salesDate BETWEEN @dateMin AND @dateMax;", conn);
+                cmd.Parameters.AddWithValue("@dateMin", dateMin);
+                cmd.Parameters.AddWithValue("@dateMax", dateMax);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                // Đổ dữ liệu vào DataGridView
+                dgSaleReportDate.DataSource = dt;
+            }
         }
     }
 }

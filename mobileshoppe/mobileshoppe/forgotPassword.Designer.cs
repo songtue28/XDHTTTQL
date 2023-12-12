@@ -80,13 +80,14 @@
             this.txtpass.AutoSize = true;
             this.txtpass.Location = new System.Drawing.Point(148, 204);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(35, 13);
+            this.txtpass.Size = new System.Drawing.Size(49, 13);
             this.txtpass.TabIndex = 4;
-            this.txtpass.Text = "label4";
+            this.txtpass.Text = "_ _ _ _ _";
             // 
             // lblLoginpage
             // 
             this.lblLoginpage.AutoSize = true;
+            this.lblLoginpage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLoginpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginpage.Location = new System.Drawing.Point(255, 264);
             this.lblLoginpage.Name = "lblLoginpage";

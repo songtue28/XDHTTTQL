@@ -114,7 +114,7 @@
             // 
             this.lbladdress.AutoSize = true;
             this.lbladdress.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdress.Location = new System.Drawing.Point(148, 170);
+            this.lbladdress.Location = new System.Drawing.Point(118, 170);
             this.lbladdress.Name = "lbladdress";
             this.lbladdress.Size = new System.Drawing.Size(55, 21);
             this.lbladdress.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(146, 233);
+            this.lblemail.Location = new System.Drawing.Point(116, 233);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(55, 21);
             this.lblemail.TabIndex = 7;
@@ -156,9 +156,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(242, 169);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 20);
+            this.label11.Size = new System.Drawing.Size(44, 20);
             this.label11.TabIndex = 10;
-            this.label11.Text = "IMEI";
+            this.label11.Text = "IMEI:";
             // 
             // label12
             // 
@@ -166,9 +166,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(245, 233);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 20);
+            this.label12.Size = new System.Drawing.Size(49, 20);
             this.label12.TabIndex = 11;
-            this.label12.Text = "Price";
+            this.label12.Text = "Price:";
             // 
             // label13
             // 
@@ -176,9 +176,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(245, 287);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 20);
+            this.label13.Size = new System.Drawing.Size(79, 20);
             this.label13.TabIndex = 12;
-            this.label13.Text = "Warranty";
+            this.label13.Text = "Warranty:";
             // 
             // lblcompname
             // 
@@ -204,7 +204,7 @@
             // 
             this.lblIMEI.AutoSize = true;
             this.lblIMEI.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIMEI.Location = new System.Drawing.Point(360, 169);
+            this.lblIMEI.Location = new System.Drawing.Point(330, 167);
             this.lblIMEI.Name = "lblIMEI";
             this.lblIMEI.Size = new System.Drawing.Size(64, 21);
             this.lblIMEI.TabIndex = 15;
@@ -214,7 +214,7 @@
             // 
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprice.Location = new System.Drawing.Point(364, 221);
+            this.lblprice.Location = new System.Drawing.Point(334, 219);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(64, 21);
             this.lblprice.TabIndex = 16;
@@ -224,7 +224,7 @@
             // 
             this.lblwarr.AutoSize = true;
             this.lblwarr.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwarr.Location = new System.Drawing.Point(368, 288);
+            this.lblwarr.Location = new System.Drawing.Point(338, 286);
             this.lblwarr.Name = "lblwarr";
             this.lblwarr.Size = new System.Drawing.Size(64, 21);
             this.lblwarr.TabIndex = 17;
